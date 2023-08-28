@@ -5,9 +5,8 @@ m = 750
 Output:
 2
 '''
-print('Введите n')
-n = int(input())
-print('Введите m')
-m = int(input())
+
+n = int(input('Введите расстояние за день '))
+m = int(input('Введите длину маршрута '))
 t = (m + n -1) // n
 print(f'Время в пути {t}')
