@@ -7,13 +7,13 @@
 '''
 import random
 n = int(input('Введите количество монет '))
-countOrel = 0
+countHaeds = 0
 for i in range(1, n+1):
-    m = random.randint(1, 10) <= 5
-    r = 'орлом' if m else 'решкой'
-    print(f'{i}-я монета лежит {r}')
-    if m:
-        countOrel+=1
-countReshka = n - countOrel
-minSwap = countOrel if countOrel < countReshka else countReshka
-print(f'Минимальное количество монет, которые нужно перевернуть {minSwap}')
+    isHead = random.randint(1, 100) <= 50
+    message = f'{i}-я монета лежит орлом' if isHead else f'{i}-я монета лежит решкой'
+    print(message)
+    if isHead:
+        countHaeds+=1
+countTails = n - countHaeds
+minCountSwap = countHaeds if countHaeds < countTails else countTails
+print(f'Минимальное количество монет, которые нужно перевернуть {minCountSwap}')

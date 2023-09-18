@@ -5,9 +5,9 @@
 '''
 import math
 n = int(input('Укажите число N '))
-power = 1
-k = 0
-while power < n:
-    print(f'{power:.0f}')
-    k+=1
-    power = math.pow(2,k)
+twoByCurrentPower = 1
+countPower = 0
+while twoByCurrentPower < n:
+    print(f'{twoByCurrentPower:.0f}')
+    countPower+=1
+    twoByCurrentPower = math.pow(2,countPower)

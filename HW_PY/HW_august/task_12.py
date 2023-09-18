@@ -9,13 +9,13 @@
 import math      
 sum = int(input('Укажите сумму двух задуманных чисел ')) 
 mult = int(input('Укажите произведение двух задуманных чисел '))
-D = sum * sum - 4 * mult
+D = sum * sum - 4 * mult  # вычисление дискриминанта
 if D < 0:
     print('Не существует таких чисел ')
 else:
-    y = (sum + math.sqrt(D))/2
+    y = (sum + math.sqrt(D))/2  # вычисление первого корня
     if y < 0:
-        y = (sum - math.sqrt(D))/2
+        y = (sum - math.sqrt(D))/2  # вычисление второго корня
     x = sum - y
     print(f'Петя загадал числа {x:.0f} и {y:.0f}')
                                                                
