@@ -1,9 +1,20 @@
-for num in range(15):
-    a = list(reversed([1, 2, 3, num, 5]))
-    b = list(reversed([1, num, 2, 3, 3]))
-    for i in range(5):
-        a[i] = a[i] * 15 ** i
-        b[i] = b[i] * 15 ** i
-    if (sum(a) + sum(b)) % 14 == 0:
-        print((sum(a) + sum(b)) // 14)
-        break
+list_1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
+def map(funcPreobr, x):
+    return funcPreobr(x)
+
+def filter(funcFilter, x):
+    return funcFilter(x)
+
+res = []
+'''
+for item in list_1:
+    if filter(lambda x: x % 2 != 0, item):
+        res.append(map(lambda x: (x, x * x), item))
+'''
+res = [map(lambda x: (x, x * x), item) for item in list_1 if filter(lambda x: x % 2 != 0, item)]
+print(res)
+        
+
+
+
